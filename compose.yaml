@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: group06/fluxion:week6
+    container_name: fluxion-web
+    ports:
+      - "${HOST_PORT:-8080}:80"
+    restart: unless-stopped
